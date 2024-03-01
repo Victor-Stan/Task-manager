@@ -1,0 +1,105 @@
+#root {
+  background-color: blanchedalmond;
+  min-height: 100vh;
+}
+
+.done,
+.progress,
+.logout,
+.add {
+  padding: 10rem;
+  border-radius: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login {
+  border-radius: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+}
+
+.done:hover,
+.progress:hover,
+.logout:hover,
+.add:hover,
+.login:hover {
+  transform: scale(1.1);
+  border: 1px solid red;
+}
+
+.done {
+  background-color: rgb(60, 153, 122);
+}
+
+.progress {
+  background-color: rgb(134, 67, 67);
+}
+
+.logout {
+  background-color: rgb(55, 113, 151);
+  border-radius: 10px;
+  font-size: small;
+  padding: 0.1rem;
+}
+
+.add {
+  padding: 0.2rem;
+  border-radius: 4px;
+  margin: 2px;
+  background-color: rgb(55, 113, 151);
+}
+
+.todo-input {
+  font-style: italic;
+  border-radius: 1px;
+}
+
+.avatar {
+    animation: spin 2s linear 1; 
+  }
+
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  
+  
+
+.wave {
+    animation: wave 2s ease-in-out infinite;
+  }
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .done,
+  .progress {
+    padding: 3rem;
+  }
+}
