@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
+import { auth, db } from "./firebase-config";
 import {
   addDoc,
   collection,
@@ -9,16 +10,8 @@ import {
   deleteDoc,
   setDoc,
   onSnapshot,
-  Firestore,
- 
 } from "firebase/firestore";
 import { HorizontalLayout } from "@hilla/react-components/HorizontalLayout.js";
-import { Auth } from "firebase/auth";
-
-interface TodoListProps {
-  db: Firestore;
-  auth: Auth;
-}
 
 interface Todo {
   id: string;
@@ -27,7 +20,7 @@ interface Todo {
   status: string;
 }
 
-const TodoList: React.FC <TodoListProps> = ({ db, auth }) => {
+const TodoList: React.FC = () => {
   const { status } = useParams<{ status?: string }>();
   let todoStatus = status || "in-progress";
 
