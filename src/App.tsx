@@ -8,7 +8,13 @@ import { RxAvatar } from "react-icons/rx";
 import { HorizontalLayout } from "@hilla/react-components/HorizontalLayout.js";
 import { VerticalLayout } from "@hilla/react-components/VerticalLayout.js";
 import { MdWavingHand } from "react-icons/md";
+import viteLogo from "/vite.svg";
 import "./App.css";
+import { LoginForm } from "@hilla/react-components/LoginForm.js";
+import { FaFacebook } from "react-icons/fa";
+import { FaGooglePlus } from "react-icons/fa";
+import { AiFillTwitterCircle } from "react-icons/ai";
+import { FaLinkedin } from "react-icons/fa";
 
 const App: React.FC = () => {
   const [user, setUser] = useState<User | null>(null);
@@ -72,12 +78,28 @@ const App: React.FC = () => {
           theme="spacing padding"
           style={{ alignItems: "center" }}
         >
+          <HorizontalLayout className="hl">
+            <img src={viteLogo} className="logo" alt="Vite logo" />
+          </HorizontalLayout>
+
+
           <h1 className="first-h1">
             Hello <MdWavingHand className="wave" /> , Login to continue.
           </h1>
+          <LoginForm no-autofocus />
+          <p className="para">Or</p>
           <button className="login" onClick={handleLogin}>
-            Login with Google
+            sign in with Google
           </button>
+<footer>
+  <HorizontalLayout   theme="spacing-l padding">
+
+  <FaFacebook size={30} className="fb" />
+  <FaGooglePlus size={30} className="gp" />
+  <AiFillTwitterCircle size={30} className="tt"/>
+  <FaLinkedin size={30} className="lnk"/>
+  </HorizontalLayout>
+</footer>
         </VerticalLayout>
       )}
     </div>

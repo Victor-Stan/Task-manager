@@ -1,6 +1,39 @@
 #root {
   background-color: blanchedalmond;
   min-height: 100vh;
+  background-image: url(https://thumbs.dreamstime.com/z/business-task-management-vector-illustration-set-isolated-white-background-effective-corporate-time-tasks-planning-scheduling-157821557.jpg);
+  background-size: "cover";
+}
+.fb {
+  color: rgb(7, 70, 187);
+}
+.gp {
+  color: rgb(150, 23, 23);
+}
+.tt {
+  color: rgb(96, 166, 212);
+}
+.lnk {
+  color: rgb(47, 39, 167);
+  border-radius: 100%;
+}
+
+.logo {
+  height: 4em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.para {
+  font-size: xx-large;
+  font-weight: bolder;
+  font-style: italic;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #450aa3aa);
 }
 
 .done,
@@ -20,6 +53,10 @@
   cursor: pointer;
   transition: all 0.3s ease;
   padding: 0.5rem;
+  background-image: linear-gradient(rgb(0, 225, 255),rgb(0, 204, 255),rgb(0, 81, 255),rgb(34, 0, 128));
+  border: 1px solid black;
+  font-weight: bold;
+  color: antiquewhite;
 }
 
 .done:hover,
@@ -59,24 +96,21 @@
 }
 
 .avatar {
-    animation: spin 2s linear 1; 
-  }
+  animation: spin 2s linear 1;
+}
 
 @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
   }
-  
-  
-  
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 .wave {
-    animation: wave 2s ease-in-out infinite;
-  }
+  animation: wave 2s ease-in-out infinite;
+}
 
 @keyframes wave {
   0% {
@@ -95,7 +129,6 @@
     transform: rotate(0deg);
   }
 }
-
 
 @media screen and (max-width: 768px) {
   .done,
